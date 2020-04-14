@@ -1,0 +1,17 @@
+{
+  "name": "markdown-blog",
+  "version": "1.0.0",
+  "description": "A blog system based on markdown(without mysql)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "wongyujing",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
+}
