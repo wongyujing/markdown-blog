@@ -4,7 +4,8 @@
   "description": "A blog system based on markdown(without mysql)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "blog"
@@ -12,6 +13,10 @@
   "author": "wongyujing",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.11.0"
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
