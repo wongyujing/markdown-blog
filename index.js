@@ -1,12 +1,9 @@
 const Koa = require('koa');
-const Router = require('koa-router');
+const router = require('./router');
+const koaStatic = require('koa-static');
 
 const app = new Koa();
-const router = new Router();
 
-router.get('/list', (ctx) => {
-  ctx.body = 'hello';
-})
 // 日志中间件
 const logger = async (ctx, next) => {
   await next();
@@ -19,5 +16,7 @@ app.use(logger);
 app
   .use(router.routes())
   .use(router.allowedMethods());
+
+app.use(koaStatic(__dirname + '/static'));
 
 app.listen(3000);

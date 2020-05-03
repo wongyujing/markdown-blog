@@ -13,10 +13,13 @@
   "author": "wongyujing",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.2",
     "koa": "^2.11.0",
-    "koa-router": "^8.0.8"
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.9.5",
     "nodemon": "^2.0.3"
   }
 }
