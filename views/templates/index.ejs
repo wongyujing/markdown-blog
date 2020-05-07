@@ -10,9 +10,17 @@
 <%- include('header') %>
 <div class="container content">
     <% for(let i = 0; i < list.length; i++) { %>
-        <a class="article-item" href="<%= `/${list[i]}` %>">
-            <%= list[i] %>
-        </a>
+        <div class="article-item" href="<%= `/${list[i]}` %>">
+            <div class="article-item-wrap">
+                <img
+                    class="article-item-img"
+                    src="<%= `http://oss.wongyujing.top/blog/${list[i]}.png` %>"
+                    alt="img"
+                >
+            </div>
+            <h2 class="article-title"><%= list[i] %></h2>
+            <a class="btn-link" href="<%= `/${list[i]}` %>">去康康</a>
+        </div>
     <% } %>
 </div>
 <%- include('footer') %>

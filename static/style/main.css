@@ -40,9 +40,35 @@ footer {
   box-sizing: border-box;
   width: 250px;
   height: 380px;
-  padding: 20px;
   margin: 0 10px;
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
-  text-decoration: none;
   color: #333;
+}
+.article-item-wrap {
+  height: 180px;
+  overflow: hidden;
+}
+.article-item-img {
+  width: 100%;
+  height: 180px;
+  transition: transform .5s ease;
+}
+.article-item:hover .article-item-img {
+  transform: scale(1.1);
+}
+.article-title {
+  line-height: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+}
+.btn-link {
+  text-decoration: none;
+  width: 60px;
+  color: #333;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #969696;
+  border-radius: 3px;
+  text-align: center;
 }
