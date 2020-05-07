@@ -30,7 +30,7 @@ router.get('/:name', ctx => {
     encoding: 'utf-8'
   });
   ctx.body = ejs.render(html,
-      {content: htmlStr},
+      {content: htmlStr, title: name},
       {filename: path.resolve(__dirname, '../views/templates/detail.ejs')}
   );
 })
