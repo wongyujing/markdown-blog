@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const router = require('./router');
 const koaStatic = require('koa-static');
+const koaFavicon = require('koa-favicon');
 
 const app = new Koa();
 
@@ -12,6 +13,8 @@ const logger = async (ctx, next) => {
 }
 
 app.use(logger);
+
+app.use(koaFavicon(__dirname + '/favicon.ico'));
 
 app
   .use(router.routes())

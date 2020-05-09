@@ -21,14 +21,17 @@ router.get('/', ctx => {
 
 router.get('/:name', ctx => {
   const { name } = ctx.params;
-  const content = fs.readFileSync(path.resolve(__dirname, `../content/${name}.md`), {
-    encoding: 'utf-8'
-  });
+  const encoding = { encoding: 'utf-8' };
+  const content = fs.readFileSync(
+    path.resolve(__dirname, `../content/${name}.md`),
+    encoding
+  );
   const md = new MarkdownIt();
   const htmlStr = md.render(content);
-  const html = fs.readFileSync(path.resolve(__dirname, '../views/templates/detail.ejs'), {
-    encoding: 'utf-8'
-  });
+  const html = fs.readFileSync(
+    path.resolve(__dirname, '../views/templates/detail.ejs'),
+    encoding
+  );
   ctx.body = ejs.render(html,
       {content: htmlStr, title: name},
       {filename: path.resolve(__dirname, '../views/templates/detail.ejs')}
