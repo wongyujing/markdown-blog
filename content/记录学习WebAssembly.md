@@ -1,3 +1,8 @@
+---
+time: 2020-02-14
+keyword: WebAssembly
+---
+
 # 一、背景介绍
 
 在2019年底，前端迎来了除`HTML`、`CSS`、`Javascript`以外的第四位剑客——`WebAssembly`，随着`WebAssembly`正式被纳入W3C的标准，页面性能成为了前端未来发展的重要方向之一。

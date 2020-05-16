@@ -9,6 +9,13 @@
 </head>
 <body>
 <%- include('header') %>
+<div class="info">
+    <span>
+        Time: <%- `${new Date(time).getFullYear()}-${new Date(time).getMonth() + 1}-${new Date(time).getDate()}` %>
+    </span>
+    <% console.log(keyword.split(',').map(tag => `<i>${tag}</i>`)) %>
+    <span>Tags: <%- keyword.split(',').map(tag => `<i class="tag">${tag}</i>`).join('') %></span>
+</div>
 <div class="container">
     <%- content %>
 </div>

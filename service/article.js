@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
 const MarkdownIt = require('markdown-it');
+const meta = require('markdown-it-meta');
 
 module.exports.getList = function() {
   const indexPath = path.resolve(__dirname, '../views/templates/index.ejs');
@@ -25,13 +26,16 @@ module.exports.getContent = function(name) {
       encoding
   );
   const md = new MarkdownIt();
+  md.use(meta);
   const htmlStr = md.render(content);
   const html = fs.readFileSync(
       path.resolve(__dirname, '../views/templates/detail.ejs'),
       encoding
   );
+  console.log(md.meta);
+  const info = md.meta;
   return ejs.render(html,
-  {content: htmlStr, title: name},
+  {content: htmlStr, title: name, ...info},
   {filename: path.resolve(__dirname, '../views/templates/detail.ejs')}
   );
 }
