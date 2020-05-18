@@ -9,7 +9,8 @@ const app = new Koa();
 const logger = async (ctx, next) => {
   await next();
   const { method, url } = ctx.request;
-  console.log(`${url} ${method}`);
+  const time = new Date();
+  console.log(`${time} ${decodeURIComponent(url)} ${method}`);
 }
 
 app.use(logger);
