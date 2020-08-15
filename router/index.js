@@ -12,4 +12,8 @@ router.get('/:name', ctx => {
   ctx.body = article.getContent(name);
 })
 
+router.get('/api/getArticleList', ctx => {
+  ctx.body = article.getDataList();
+})
+
 module.exports = router;

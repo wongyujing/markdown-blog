@@ -39,8 +39,12 @@ footer {
   width: 250px;
   height: 300px;
   margin: 0 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.1);
   color: #333;
+  border: 1px solid rgba(236,236,236, .6);
+  transition: box-shadow ease .3s;
+}
+.article-item:hover {
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
 }
 .article-item-wrap {
   height: 180px;
@@ -119,5 +123,6 @@ footer {
 @media screen and (max-width: 414px) {
   .article-item {
     margin: 10px auto;
+    width: 85%;
   }
 }

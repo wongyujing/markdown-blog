@@ -39,3 +39,11 @@ module.exports.getContent = function(name) {
   {filename: path.resolve(__dirname, '../views/templates/detail.ejs')}
   );
 }
+
+module.exports.getDataList = function() {
+  const contentPath = path.resolve(__dirname, '../content');
+  const markdownList = fs.readdirSync(contentPath, {
+    encoding: 'utf-8'
+  });
+  return markdownList.map(article => article.replace(/.md/, ''));
+}
